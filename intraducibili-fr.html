@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Parole Francesi Intraducibili - FrançaisTips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --slate: #2c3e50;
+            --champagne: #e3c08d;
+            --gold-dark: #b89150;
+            --cream: #f9f7f2;
+            --text-main: #34495e;
+            --text-muted: #7f8c8d;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Lexend', sans-serif; }
+
+        header {
+            background: var(--slate);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span { color: var(--champagne); }
+
+        .hero {
+            padding: 80px 20px 60px;
+            text-align: center;
+            background: linear-gradient(rgba(44, 62, 80, 0.05), rgba(44, 62, 80, 0.05)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNjNWExNTkiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTAgNDBoNDB2LTFIMHYxaHpNMCAxdjM5aDFWMGgtMXYxeiIvPjwvZz48L2c+PC9zdmc+');
+        }
+
+        .hero h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); color: var(--slate); margin-bottom: 20px; }
+        .hero h1 span { border-bottom: 4px solid var(--champagne); }
+        .hero p { color: var(--text-muted); font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+
+        .content-container { max-width: 1300px; margin: 0 auto; padding: 40px 20px 100px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 35px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(44, 62, 80, 0.08);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--champagne);
+            transition: width 0.3s;
+        }
+
+        .card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 20px 40px rgba(44, 62, 80, 0.1);
+        }
+
+        .card:hover::before { width: 8px; background: var(--gold-dark); }
+
+        .french-word { font-size: 1.7rem; font-weight: 800; color: var(--slate); margin-bottom: 15px; }
+        
+        .label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 8px; color: var(--gold-dark); }
+        
+        .meaning-text { font-size: 1rem; color: var(--text-main); margin-bottom: 25px; flex-grow: 1; }
+        
+        .italian-concept { 
+            background: var(--slate); 
+            color: var(--champagne); 
+            padding: 12px 18px; 
+            border-radius: 6px; 
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-bottom {
+            background: var(--slate);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-bottom h2 { font-size: 2rem; margin-bottom: 20px; }
+        .cta-btn {
+            background: var(--champagne);
+            color: var(--slate);
+            padding: 18px 45px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-block;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .cta-btn:hover { background: var(--white); transform: scale(1.05); }
+
+        footer {
+            background: #1a252f;
+            padding: 50px 20px;
+            text-align: center;
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .disclosure {
+            max-width: 800px;
+            margin: 25px auto 0;
+            padding-top: 25px;
+            border-top: 1px solid #34495e;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: #95a5a6;
+        }
+
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Français<span>Tips</span></a>
+    </header>
+
+    <section class="hero">
+        <h1>L'anima del <span>Francese</span></h1>
+        <p>30 concetti affascinanti che descrivono l'estetica, la malinconia e le sfumature della vita sociale parigina.</p>
+    </section>
+
+    <div class="content-container">
+        <div class="grid">
+            <div class="card">
+                <span class="label">L'Emozione</span>
+                <span class="french-word">Dépaysement</span>
+                <p class="meaning-text">La sensazione di disorientamento (piacevole o no) che si prova cambiando paese o ambiente; il "sentirsi spaesati".</p>
+                <div class="italian-concept">🇮🇹 Spaesamento</div>
+            </div>
+            <div class="card">
+                <span class="label">Lo Stile di Vita</span>
+                <span class="french-word">Flâneur</span>
+                <p class="meaning-text">Chi vaga per la città senza meta, osservando la società e godendosi il momento presente.</p>
+                <div class="italian-concept">🇮🇹 Vagabondo intellettuale</div>
+            </div>
+            <div class="card">
+                <span class="label">La Relazione</span>
+                <span class="french-word">Retrouvailles</span>
+                <p class="meaning-text">La gioia pura di ritrovarsi con qualcuno di caro dopo una lunga separazione.</p>
+                <div class="italian-concept">🇮🇹 La gioia del rientro</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Istinto</span>
+                <span class="french-word">L’appel du vide</span>
+                <p class="meaning-text">"Il richiamo del vuoto"; l'impulso irrazionale di saltare quando si è in alto, pur senza intenzioni suicide.</p>
+                <div class="italian-concept">🇮🇹 Vertigine irrazionale</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Arguzia</span>
+                <span class="french-word">Esprit de l’escalier</span>
+                <p class="meaning-text">"Lo spirito delle scale"; quando la replica perfetta ti viene in mente troppo tardi, mentre stai già andando via.</p>
+                <div class="italian-concept">🇮🇹 Prontezza tardiva</div>
+            </div>
+            <div class="card">
+                <span class="label">Il Comportamento</span>
+                <span class="french-word">Savoir-faire</span>
+                <p class="meaning-text">La capacità di dire o fare la cosa giusta, con naturalezza, in ogni situazione sociale.</p>
+                <div class="italian-concept">🇮🇹 Tatto / Abilità sociale</div>
+            </div>
+            <div class="card">
+                <span class="label">Il Fascino</span>
+                <span class="french-word">Je ne sais quoi</span>
+                <p class="meaning-text">"Non so che"; una qualità elusiva e misteriosa che rende qualcosa o qualcuno estremamente attraente.</p>
+                <div class="italian-concept">🇮🇹 Fascino indefinibile</div>
+            </div>
+            <div class="card">
+                <span class="label">La Filosofia</span>
+                <span class="french-word">Joie de vivre</span>
+                <p class="meaning-text">L'esuberante gioia di vivere e la capacità di godersi i piccoli piaceri della vita.</p>
+                <div class="italian-concept">🇮🇹 Gioia di vivere</div>
+            </div>
+            <div class="card">
+                <span class="label">Il Sentimento</span>
+                <span class="french-word">La douleur exquise</span>
+                <p class="meaning-text">Il dolore straziante, ma quasi sublime, di desiderare profondamente qualcuno che non si può avere.</p>
+                <div class="italian-concept">🇮🇹 Tormento d'amore</div>
+            </div>
+            <div class="card">
+                <span class="label">La Malinconia</span>
+                <span class="french-word">Spleen</span>
+                <p class="meaning-text">Una profonda malinconia esistenziale, noia e insoddisfazione senza una causa apparente.</p>
+                <div class="italian-concept">🇮🇹 Noia esistenziale</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Esistenza</span>
+                <span class="french-word">Raison d'être</span>
+                <p class="meaning-text">La ragione di esistere, lo scopo fondamentale che dà senso alla vita di una persona.</p>
+                <div class="italian-concept">🇮🇹 Ragion d'essere</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Incontro</span>
+                <span class="french-word">Tête-à-tête</span>
+                <p class="meaning-text">Una conversazione privata, intima e confidenziale tra due sole persone.</p>
+                <div class="italian-concept">🇮🇹 A quattr'occhi</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Amore</span>
+                <span class="french-word">Coup de foudre</span>
+                <p class="meaning-text">"Colpo di fulmine"; l'innamoramento istantaneo e travolgente a prima vista.</p>
+                <div class="italian-concept">🇮🇹 Colpo di fulmine</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Autorità</span>
+                <span class="french-word">Carte blanche</span>
+                <p class="meaning-text">Piena libertà di agire secondo la propria discrezione senza dover chiedere permessi.</p>
+                <div class="italian-concept">🇮🇹 Carta bianca</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Arte</span>
+                <span class="french-word">Trompe-l'œil</span>
+                <p class="meaning-text">Tecnica artistica che crea un'illusione ottica di tridimensionalità su una superficie piatta.</p>
+                <div class="italian-concept">🇮🇹 Inganna-l'occhio</div>
+            </div>
+            <div class="card">
+                <span class="label">La Creatività</span>
+                <span class="french-word">Bricolage</span>
+                <p class="meaning-text">L'arte di creare o riparare cose usando solo ciò che si ha a disposizione; il fai-da-te creativo.</p>
+                <div class="italian-concept">🇮🇹 Fai-da-te creativo</div>
+            </div>
+            <div class="card">
+                <span class="label">La Terra</span>
+                <span class="french-word">Terroir</span>
+                <p class="meaning-text">L'insieme di suolo e clima che conferisce a un vino o a un cibo un carattere unico e irripetibile.</p>
+                <div class="italian-concept">🇮🇹 Anima del territorio</div>
+            </div>
+            <div class="card">
+                <span class="label">La Cucina</span>
+                <span class="french-word">Mise en place</span>
+                <p class="meaning-text">L'organizzazione metodica di tutti gli strumenti e ingredienti prima di iniziare a cucinare.</p>
+                <div class="italian-concept">🇮🇹 Preparazione / Organizzazione</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Esclamazione</span>
+                <span class="french-word">Voilà</span>
+                <p class="meaning-text">"Ecco qua"; usato per presentare qualcosa con soddisfazione o indicare un successo immediato.</p>
+                <div class="italian-concept">🇮🇹 Ecco fatto</div>
+            </div>
+            <div class="card">
+                <span class="label">La Presenza</span>
+                <span class="french-word">Panache</span>
+                <p class="meaning-text">Uno stile fiammeggiante, coraggioso e spavaldamente sicuro di sé.</p>
+                <div class="italian-concept">🇮🇹 Eleganza spavalda</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Estetica</span>
+                <span class="french-word">Chic</span>
+                <p class="meaning-text">Elegante e alla moda in modo naturale, senza alcuno sforzo apparente.</p>
+                <div class="italian-concept">🇮🇹 Raffinato</div>
+            </div>
+            <div class="card">
+                <span class="label">La Memoria</span>
+                <span class="french-word">Déjà vu</span>
+                <p class="meaning-text">La strana sensazione psicologica di aver già vissuto o visto una situazione presente.</p>
+                <div class="italian-concept">🇮🇹 Già visto</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Appuntamento</span>
+                <span class="french-word">Rendez-vous</span>
+                <p class="meaning-text">Un incontro o appuntamento pianificato in un luogo e ora precisi.</p>
+                <div class="italian-concept">🇮🇹 Incontro prefissato</div>
+            </div>
+            <div class="card">
+                <span class="label">L'Errore</span>
+                <span class="french-word">Faux pas</span>
+                <p class="meaning-text">Un passo falso; un errore imbarazzante commesso in un contesto sociale o diplomatico.</p>
+                <div class="italian-concept">🇮🇹 Passo falso</div>
+            </div>
+            <div class="card">
+                <span class="label">La Personalità</span>
+                <span class="french-word">Enfant terrible</span>
+                <p class="meaning-text">Persona brillante ma ribelle e anticonformista che sfida le convenzioni del proprio gruppo.</p>
+                <div class="italian-concept">🇮🇹 Genio ribelle</div>
+            </div>
+            <div class="card">
+                <span class="label">La Storia</span>
+                <span class="french-word">Oubliette</span>
+                <p class="meaning-text">Una prigione sotterranea dove i prigionieri venivano letteralmente "dimenticati" per sempre.</p>
+                <div class="italian-concept">🇮🇹 Prigione dell'oblio</div>
+            </div>
+            <div class="card">
+                <span class="label">Il Rito</span>
+                <span class="french-word">Apéritif</span>
+                <p class="meaning-text">Bevanda alcolica consumata prima dei pasti per stimolare l'appetito e la conversazione.</p>
+                <div class="italian-concept">🇮🇹 Aperitivo</div>
+            </div>
+            <div class="card">
+                <span class="label">Il Linguaggio</span>
+                <span class="french-word">Cliché</span>
+                <p class="meaning-text">Un'espressione o idea talmente abusata da aver perso il suo significato originale.</p>
+                <div class="italian-concept">🇮🇹 Luogo comune</div>
+            </div>
+            <div class="card">
+                <span class="label">La Società</span>
+                <span class="french-word">Nouveau riche</span>
+                <p class="meaning-text">Chi ha accumulato ricchezza di recente e la ostenta in modo vistoso e spesso volgare.</p>
+                <div class="italian-concept">🇮🇹 Arricchito</div>
+            </div>
+            <div class="card">
+                <span class="label">La Resignazione</span>
+                <span class="french-word">C’est la vie</span>
+                <p class="meaning-text">"È la vita"; espressione usata per accettare con rassegnazione eventi inevitabili o spiacevoli.</p>
+                <div class="italian-concept">🇮🇹 Così va la vita</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-bottom">
+        <h2>Vuoi approfondire la lingua?</h2>
+        <p>Scopri i segreti del francese reale con le nostre guide complete.</p>
+        <a href="#" class="cta-btn">Esplora le Risorse</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FrançaisTips. Eleganza e precisione linguistica.</p>
+        <div class="disclosure">
+            <strong>Affiliate Disclosure:</strong> Questa guida è sostenuta dai propri lettori. Se decidi di acquistare strumenti didattici tramite i nostri link, potremmo ricevere una commissione. Consigliamo esclusivamente risorse che elevano realmente il tuo livello di conoscenza.
+        </div>
+    </footer>
+
+</body>
+  </html>
+  
