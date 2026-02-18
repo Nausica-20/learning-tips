@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parole Uniche e Intraducibili - EnglishTips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5c6bc0; /* Indigo per un tocco poetico e moderno */
+            --primary-dark: #3949ab;
+            --secondary: #1a237e;
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+            --bg-body: #f8f9fa;
+            --white: #ffffff;
+            --card-shadow: rgba(92, 107, 192, 0.1);
+            --accent-bg: #f0f2f9;
+            --accent-text: #3f51b5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Lexend', sans-serif; }
+
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span { color: var(--primary); }
+
+        .badge-special {
+            background: var(--accent-bg);
+            color: var(--accent-text);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .hero {
+            padding: 60px 20px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #ffffff 0%, #f0f2f9 100%);
+        }
+
+        .hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 15px; color: var(--secondary); }
+        .hero h1 span { color: var(--primary); }
+        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 750px; margin: 0 auto; }
+
+        .content-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 40px var(--card-shadow);
+            border-color: var(--primary);
+        }
+
+        .word-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .english-word { font-size: 1.6rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
+        
+        .definition-box { margin-bottom: 15px; }
+        .label { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 5px; color: var(--text-muted); }
+        
+        .meaning-text { font-size: 0.95rem; color: var(--text-main); line-height: 1.5; }
+        .italian-concept { 
+            background: var(--accent-bg); 
+            color: var(--accent-text); 
+            padding: 10px 15px; 
+            border-radius: 12px; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        .cta-bottom {
+            background: var(--secondary);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-btn-lg {
+            background: var(--primary);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-block;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        footer {
+            background: #f1f2f6;
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .disclosure {
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">English<span>Tips</span></a>
+        <div style="display: flex; gap: 10px;">
+            <a href="#" class="cta-btn-lg" style="margin-top:0; padding: 8px 15px; font-size: 0.8rem; background: #eee; color: #333;">Parte 1 & 2</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="badge-special">Vocabolario Emozionale & Slang</div>
+        <h1>Parole che <span>lasciano il segno</span></h1>
+        <p>Alcuni concetti sono troppo complessi per una sola parola italiana. Scopri i termini inglesi più affascinanti, poetici e moderni.</p>
+    </section>
+
+    <div class="content-container">
+        <div class="grid">
+            <div class="card">
+                <div class="word-header"><span class="english-word">Serendipity</span><span>✨</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">La fortuna di fare scoperte felici e inattese mentre si cercava altro.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Serendipità / Colpo di fortuna</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Petrichor</span><span>🌧️</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Il profumo particolare che si sprigiona dalla terra asciutta quando viene bagnata dalla pioggia.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Odore di pioggia</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Wanderlust</span><span>✈️</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Un desiderio fortissimo e irrefrenabile di viaggiare e scoprire il mondo.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Voglia di vagabondare</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Sonder</span><span>👥</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Capire improvvisamente che ogni passante ha una vita complessa e profonda quanto la tua.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Realizzazione esistenziale</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Ineffable</span><span>😶</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Qualcosa di così incredibile, grande o bello da non poter essere espresso a parole.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Ineffabile</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Limerence</span><span>❤️</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Lo stato mentale di essere totalmente infatuati o ossessionati da un'altra persona.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Infatuazione profonda</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Ethereal</span><span>☁️</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Estremamente delicato, leggero, quasi ultraterreno o non di questo mondo.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Etereo</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Epiphany</span><span>💡</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Un momento improvviso di rivelazione, comprensione profonda o intuizione geniale.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Folgorazione / Intuizione</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Mellifluous</span><span>🍯</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Un suono o una voce dolce, musicale e piacevole, quasi come se scorresse miele.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Mellifluo (accezione positiva)</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Hiraeth</span><span>🏡</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Nostalgia struggente per una casa o un luogo dove non si può tornare, o che non è mai esistito.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Nostalgia dell'anima</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Apricity</span><span>❄️</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Il piacevole calore del sole che si percepisce sulla pelle durante una fredda giornata invernale.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Calore del sole invernale</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Solitude</span><span>🧘</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Essere soli senza sentirsi soli. Una solitudine positiva, serena e cercata per riflettere.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Solitudine eletta</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Vellichor</span><span>📚</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">La strana malinconia che si prova entrando in librerie dell'usato, cariche di storie e tempo.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Fascino dei libri antichi</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Defenestration</span><span>🪟</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">L'atto (storico o scherzoso) di gettare qualcosa o qualcuno fuori da una finestra.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Defenestrazione</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Gobbledygook</span><span>🗣️</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Linguaggio incomprensibile, farcito di termini tecnici inutili o parole senza senso.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Linguaggio astruso / Supercazzola</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Discombobulate</span><span>🌀</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Confondere, sconcertare o mandare totalmente in confusione qualcuno.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Scombussolare / Confondere</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Hangry</span><span>🍔</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Quella particolare irritabilità o rabbia causata esclusivamente dalla fame (Hungry + Angry).</p>
+                </div>
+                <div class="italian-concept">🇮🇹 "Fame nervosa"</div>
+            </div>
+            
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Earworm</span><span>🎧</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Una canzone o un motivetto che ti entra in testa e che continui a canticchiare involontariamente.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Canzone tormentone</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Bromance</span><span>👬</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Un legame di amicizia estremamente profondo, stretto e affettuoso tra due uomini (non sessuale).</p>
+                </div>
+                <div class="italian-concept">🇮🇹 Amicizia fraterna</div>
+            </div>
+
+            <div class="card">
+                <div class="word-header"><span class="english-word">Facepalm</span><span>🤦</span></div>
+                <div class="definition-box">
+                    <span class="label">Definizione</span>
+                    <p class="meaning-text">Gesto di coprirsi il viso con la mano per esprimere esasperazione, vergogna o incredulità.</p>
+                </div>
+                <div class="italian-concept">🇮🇹 "Mani in faccia" per imbarazzo</div>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="cta-bottom">
+        <h2>Espandi i tuoi orizzonti linguistici</h2>
+        <p>L'inglese è più di una lista di parole; è un modo di vedere il mondo.</p>
+        <a href="#" class="cta-btn-lg">Impara con EnglishTips</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EnglishTips. Bellezza e precisione nelle parole.</p>
+        <div class="disclosure">
+            <strong>Affiliate Disclosure:</strong> Questa guida è gratuita grazie al supporto dei nostri lettori. Alcuni link potrebbero essere affiliati, permettendoci di guadagnare una commissione senza alcun costo per te. Consigliamo solo strumenti che amiamo davvero.
+        </div>
+    </footer>
+
+</body>
+</html>
