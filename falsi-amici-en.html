@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I 20 Falsi Amici in Inglese - Guida Completa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff6d00;
+            --primary-dark: #e65100;
+            --secondary: #1a237e;
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+            --bg-body: #f4f7f6;
+            --white: #ffffff;
+            --error-bg: #fff5f5;
+            --error-text: #c0392b;
+            --success-bg: #f0fff4;
+            --success-text: #27ae60;
+            --info-bg: #e1f5fe;
+            --info-text: #0288d1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Lexend', sans-serif; }
+
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span { color: var(--primary); }
+
+        .cta-nav {
+            background: var(--primary);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .hero {
+            padding: 60px 20px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #fff 0%, var(--bg-body) 100%);
+        }
+
+        .hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 15px; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin: 0 auto; }
+
+        .content-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 25px;
+            transition: 0.3s;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.06); }
+
+        .word-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .english-word { font-size: 1.5rem; font-weight: 700; color: var(--secondary); }
+        
+        .meaning { margin-bottom: 10px; padding: 12px; border-radius: 10px; font-size: 0.9rem; }
+        
+        .meaning.wrong { background: var(--error-bg); color: var(--error-text); }
+        .meaning.correct { background: var(--success-bg); color: var(--success-text); font-weight: 600; }
+        .meaning.instead { background: var(--info-bg); color: var(--info-text); border-left: 4px solid var(--info-text); }
+
+        .meaning b { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; opacity: 0.8; }
+
+        .cta-bottom {
+            background: var(--secondary);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .cta-btn-lg {
+            background: var(--primary);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-block;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        footer {
+            background: #f1f2f6;
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .disclosure {
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.75rem;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">English<span>Tips</span></a>
+        <a href="#" class="cta-nav">Scarica Guida PDF</a>
+    </header>
+
+    <section class="hero">
+        <h1>I 20 <span>Falsi Amici</span> più comuni</h1>
+        <p>Smetti di tradurre letteralmente dall'italiano. Ecco la lista definitiva per evitare errori imbarazzanti.</p>
+    </section>
+
+    <div class="content-container">
+        <div class="grid">
+            <div class="card">
+                <div class="word-header"><span class="english-word">Actually</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Attualmente</div>
+                <div class="meaning correct"><b>✅ Significa</b> In realtà / Effettivamente</div>
+                <div class="meaning instead"><b>💡 Attualmente si dice:</b> Currently</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Annoy</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Annoiare</div>
+                <div class="meaning correct"><b>✅ Significa</b> Infastidire / Seccare</div>
+                <div class="meaning instead"><b>💡 Annoiare si dice:</b> To bore</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Argument</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Argomento</div>
+                <div class="meaning correct"><b>✅ Significa</b> Litigio / Discussione</div>
+                <div class="meaning instead"><b>💡 Argomento si dice:</b> Topic / Subject</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Brave</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Bravo</div>
+                <div class="meaning correct"><b>✅ Significa</b> Coraggioso</div>
+                <div class="meaning instead"><b>💡 Bravo si dice:</b> Good / Skilled</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Camera</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Camera (stanza)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Macchina fotografica</div>
+                <div class="meaning instead"><b>💡 Camera si dice:</b> Room / Bedroom</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Educated</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Educato</div>
+                <div class="meaning correct"><b>✅ Significa</b> Istruito / Colto</div>
+                <div class="meaning instead"><b>💡 Educato si dice:</b> Polite</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Eventually</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Eventualmente</div>
+                <div class="meaning correct"><b>✅ Significa</b> Alla fine / Infine</div>
+                <div class="meaning instead"><b>💡 Eventualmente si dice:</b> If necessary</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Factory</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Fattoria</div>
+                <div class="meaning correct"><b>✅ Significa</b> Fabbrica</div>
+                <div class="meaning instead"><b>💡 Fattoria si dice:</b> Farm</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Library</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Libreria</div>
+                <div class="meaning correct"><b>✅ Significa</b> Biblioteca</div>
+                <div class="meaning instead"><b>💡 Libreria si dice:</b> Bookshop</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Parents</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Parenti</div>
+                <div class="meaning correct"><b>✅ Significa</b> Genitori</div>
+                <div class="meaning instead"><b>💡 Parenti si dice:</b> Relatives</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Pretend</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Pretendere</div>
+                <div class="meaning correct"><b>✅ Significa</b> Fingere</div>
+                <div class="meaning instead"><b>💡 Pretendere si dice:</b> To demand</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Preservative</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Preservativo</div>
+                <div class="meaning correct"><b>✅ Significa</b> Conservante</div>
+                <div class="meaning instead"><b>💡 Preservativo si dice:</b> Condom</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Rumor</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Rumore</div>
+                <div class="meaning correct"><b>✅ Significa</b> Pettegolezzo / Voce</div>
+                <div class="meaning instead"><b>💡 Rumore si dice:</b> Noise</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Sensible</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Sensibile</div>
+                <div class="meaning correct"><b>✅ Significa</b> Saggio / Ragionevole</div>
+                <div class="meaning instead"><b>💡 Sensibile si dice:</b> Sensitive</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Sensitive</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Sensitivo</div>
+                <div class="meaning correct"><b>✅ Significa</b> Sensibile</div>
+                <div class="meaning instead"><b>💡 Sensitivo si dice:</b> Psychic</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Terrific</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Terrificante</div>
+                <div class="meaning correct"><b>✅ Significa</b> Fantastico / Eccezionale</div>
+                <div class="meaning instead"><b>💡 Terrificante si dice:</b> Terrifying</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Vacancy</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Vacanza</div>
+                <div class="meaning correct"><b>✅ Significa</b> Posto libero / Vuoto</div>
+                <div class="meaning instead"><b>💡 Vacanza si dice:</b> Holiday / Vacation</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Accident</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Accidente</div>
+                <div class="meaning correct"><b>✅ Significa</b> Incidente</div>
+                <div class="meaning instead"><b>💡 Accidente si dice:</b> Ailment / Stroke</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Large</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Largo</div>
+                <div class="meaning correct"><b>✅ Significa</b> Grande</div>
+                <div class="meaning instead"><b>💡 Largo si dice:</b> Wide</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Fabric</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Fabbrica</div>
+                <div class="meaning correct"><b>✅ Significa</b> Tessuto</div>
+                <div class="meaning instead"><b>💡 Fabbrica si dice:</b> Factory</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-bottom">
+        <h2>Pronto a parlare un inglese naturale?</h2>
+        <p>Inizia il tuo percorso con un metodo basato su situazioni reali.</p>
+        <a href="#" class="cta-btn-lg">Scopri di più su Babbel</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EnglishTips. Impara l'inglese vero.</p>
+        <div class="disclosure">
+            <strong>Affiliate Disclosure:</strong> Questa pagina contiene link di affiliazione. Se decidi di acquistare un corso tramite questi link, potremmo ricevere una piccola commissione senza alcun costo aggiuntivo per te. Questo ci permette di continuare a creare contenuti gratuiti di qualità.
+        </div>
+    </footer>
+
+</body>
+  </html>
+                  
