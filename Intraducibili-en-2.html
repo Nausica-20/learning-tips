@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Parole Indimenticabili - Parte 4 - EnglishTips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8e24aa; /* Deep Purple */
+            --primary-light: #f3e5f5;
+            --accent: #d81b60; /* Rose accent */
+            --secondary: #4a148c;
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+            --bg-body: #fafafa;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Lexend', sans-serif; }
+
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span { color: var(--accent); }
+
+        .hero {
+            padding: 60px 20px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+        }
+
+        .hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 15px; color: var(--secondary); }
+        .hero h1 span { color: var(--accent); }
+        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
+
+        .content-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 30px rgba(74, 20, 140, 0.1);
+            border-color: var(--accent);
+        }
+
+        .word-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .english-word { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
+        
+        .label { display: block; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 5px; color: var(--accent); }
+        
+        .meaning-text { font-size: 0.9rem; color: var(--text-main); margin-bottom: 15px; }
+        
+        .italian-concept { 
+            background: var(--primary-light); 
+            color: var(--secondary); 
+            padding: 8px 12px; 
+            border-radius: 8px; 
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .cta-bottom {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta-btn {
+            background: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #f1f2f6;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .disclosure {
+            max-width: 700px;
+            margin: 15px auto 0;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">English<span>Tips</span></a>
+        <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted);">Parte 4: 30 Nuove Parole</span>
+    </header>
+
+    <section class="hero">
+        <h1>Oltre la <span>Traduzione</span></h1>
+        <p>30 termini affascinanti per descrivere l'indescrivibile. Dall'eleganza del suono alla precisione dei sentimenti.</p>
+    </section>
+
+    <div class="content-container">
+        <div class="grid">
+            <div class="card">
+                <div class="word-header"><span class="english-word">Pluviophile</span><span>🌧️</span></div>
+                <p class="meaning-text">Qualcuno che trova gioia e pace mentale durante i giorni di pioggia.</p>
+                <div class="italian-concept">🇮🇹 Amante della pioggia</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Liminal</span><span>🚪</span></div>
+                <p class="meaning-text">Uno stato di transizione, la soglia tra due fasi o luoghi diversi.</p>
+                <div class="italian-concept">🇮🇹 Liminale / Di soglia</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Ebullience</span><span>🔥</span></div>
+                <p class="meaning-text">La qualità di essere sprizzante di energia, gioia ed entusiasmo.</p>
+                <div class="italian-concept">🇮🇹 Ebullienza / Vivacità</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Evanescent</span><span>💨</span></div>
+                <p class="meaning-text">Qualcosa che svanisce rapidamente come fumo, destinato a durare pochissimo.</p>
+                <div class="italian-concept">🇮🇹 Evanescente</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Halcyon</span><span>🌊</span></div>
+                <p class="meaning-text">Indica un periodo di tempo passato caratterizzato da pace, felicità e idillio.</p>
+                <div class="italian-concept">🇮🇹 Alcionio / Tranquillo</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Lilt</span><span>🎶</span></div>
+                <p class="meaning-text">Una cadenza ritmica e melodica della voce, piacevole da ascoltare.</p>
+                <div class="italian-concept">🇮🇹 Cadenza melodica</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Murmuration</span><span>🐦</span></div>
+                <p class="meaning-text">Il fenomeno coreografico di un enorme stormo di uccelli che danza nel cielo.</p>
+                <div class="italian-concept">🇮🇹 Stormo danzante</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Susurrus</span><span>🍃</span></div>
+                <p class="meaning-text">Un sussurro o un fruscio leggero, come quello delle foglie al vento.</p>
+                <div class="italian-concept">🇮🇹 Susurro / Fruscio</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Elysian</span><span>👼</span></div>
+                <p class="meaning-text">Relativo o caratteristico del paradiso; divino, ispirato e beatamente felice.</p>
+                <div class="italian-concept">🇮🇹 Elisiaco / Paradisiaco</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Lacuna</span><span>🕳️</span></div>
+                <p class="meaning-text">Uno spazio vuoto, un intervallo mancante in un testo o in una memoria.</p>
+                <div class="italian-concept">🇮🇹 Lacuna</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Panacea</span><span>💊</span></div>
+                <p class="meaning-text">Una soluzione o un rimedio universale per tutte le difficoltà o malattie.</p>
+                <div class="italian-concept">🇮🇹 Panacea</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Plethora</span><span>📈</span></div>
+                <p class="meaning-text">Una quantità eccessiva, un'abbondanza che quasi supera il necessario.</p>
+                <div class="italian-concept">🇮🇹 Pletora / Eccesso</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Sanguine</span><span>🍷</span></div>
+                <p class="meaning-text">Essere ottimisti e positivi, specialmente in una situazione difficile.</p>
+                <div class="italian-concept">🇮🇹 Sanguigno / Ottimista</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Vicarious</span><span>🎭</span></div>
+                <p class="meaning-text">Vivere un'esperienza attraverso le azioni e i sentimenti di un'altra persona.</p>
+                <div class="italian-concept">🇮🇹 Esperienza vicaria</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Zephyr</span><span>🌬️</span></div>
+                <p class="meaning-text">Una brezza leggera, dolce e rinfrescante.</p>
+                <div class="italian-concept">🇮🇹 Zefiro</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Cynosure</span><span>🎯</span></div>
+                <p class="meaning-text">Qualcuno o qualcosa che è al centro dell'attenzione o dell'ammirazione generale.</p>
+                <div class="italian-concept">🇮🇹 Centro dell'attenzione</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Diaphanous</span><span>💎</span></div>
+                <p class="meaning-text">Tessuto o materiale così leggero e delicato da essere quasi trasparente.</p>
+                <div class="italian-concept">🇮🇹 Diafano</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Gossamer</span><span>🕸️</span></div>
+                <p class="meaning-text">Qualcosa di estremamente sottile, leggero e delicato (come una ragnatela).</p>
+                <div class="italian-concept">🇮🇹 Filigrana / Sottilissimo</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Numinous</span><span>⛩️</span></div>
+                <p class="meaning-text">Avere una forte qualità spirituale o religiosa; che incute timore e meraviglia.</p>
+                <div class="italian-concept">🇮🇹 Numinoso</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Aquiver</span><span>💓</span></div>
+                <p class="meaning-text">Essere in uno stato di eccitazione o tremore per una forte emozione.</p>
+                <div class="italian-concept">🇮🇹 Tremante / Fremente</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Synchronicity</span><span>🔗</span></div>
+                <p class="meaning-text">La coincidenza temporale di due o più eventi legati da un significato comune.</p>
+                <div class="italian-concept">🇮🇹 Sincronicità</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Quintessential</span><span>🏆</span></div>
+                <p class="meaning-text">Rappresentare l'esempio più perfetto o tipico di una qualità o classe.</p>
+                <div class="italian-concept">🇮🇹 Quintessenziale</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Syzygy</span><span>🌑</span></div>
+                <p class="meaning-text">L'allineamento di tre corpi celesti (come Sole, Terra e Luna) in un sistema gravitazionale.</p>
+                <div class="italian-concept">🇮🇹 Sizigia</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Languor</span><span>🛋️</span></div>
+                <p class="meaning-text">Uno stato di piacevole stanchezza o rilassatezza, spesso causato dal caldo.</p>
+                <div class="italian-concept">🇮🇹 Languore</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Euphonious</span><span>🎻</span></div>
+                <p class="meaning-text">Un suono o una parola che risulta intrinsecamente dolce e piacevole all'orecchio.</p>
+                <div class="italian-concept">🇮🇹 Eufonico</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Logophile</span><span>📖</span></div>
+                <p class="meaning-text">Un amante delle parole e del linguaggio in tutte le sue forme.</p>
+                <div class="italian-concept">🇮🇹 Logofilo</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Eunoia</span><span>🧠</span></div>
+                <p class="meaning-text">Uno stato mentale di pensiero bello, puro e ben disposto verso gli altri.</p>
+                <div class="italian-concept">🇮🇹 Pensiero bello</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Resplendent</span><span>🌟</span></div>
+                <p class="meaning-text">Splendente in modo magnifico, radioso e pieno di colore.</p>
+                <div class="italian-concept">🇮🇹 Risplendente</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Ephemera</span><span>🎟️</span></div>
+                <p class="meaning-text">Oggetti (come biglietti o volantini) creati per un uso breve ma che diventano ricordi.</p>
+                <div class="italian-concept">🇮🇹 Oggetti effimeri</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Iridescent</span><span>🌈</span></div>
+                <p class="meaning-text">Mostrare colori luminosi che sembrano cambiare a seconda dell'angolazione.</p>
+                <div class="italian-concept">🇮🇹 Iridescente</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-bottom">
+        <h2>Il viaggio continua</h2>
+        <p>Le parole sono ponti tra culture. Scopri come usarle al meglio.</p>
+        <a href="#" class="cta-btn">Accedi alle Risorse Gratuite</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EnglishTips. Passione per il linguaggio.</p>
+        <div class="disclosure">
+            <strong>Affiliate Disclosure:</strong> Questo sito è sostenuto dai suoi lettori. Se acquisti tramite i nostri link, potremmo ricevere una commissione. Non consigliamo mai prodotti che non riteniamo eccellenti per il tuo studio.
+        </div>
+    </footer>
+
+</body>
+  </html>
+                                           
