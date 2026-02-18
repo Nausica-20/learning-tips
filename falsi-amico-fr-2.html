@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsi Amici Francesi - Parte 2 - Livello Avanzato</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a237e; /* Navy Blue */
+            --primary-light: #e8eaf6;
+            --accent: #c5a059; /* Gold accent */
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+            --bg-body: #fdfdfd;
+            --white: #ffffff;
+            --error-bg: #fff5f5;
+            --error-text: #c0392b;
+            --success-bg: #f0fff4;
+            --success-text: #27ae60;
+            --info-bg: #fff9e6;
+            --info-text: #856404;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Lexend', sans-serif; }
+
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--accent); }
+
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #1a237e 0%, #0d1241 100%);
+            color: white;
+        }
+
+        .hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 15px; }
+        .hero h1 span { color: var(--accent); }
+        .hero p { opacity: 0.9; font-size: 1.1rem; max-width: 650px; margin: 0 auto; }
+
+        .content-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 25px;
+            transition: 0.3s;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.08); border-color: var(--accent); }
+
+        .french-word { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 18px; border-bottom: 2px solid var(--accent); display: inline-block; width: fit-content; }
+        
+        .meaning { margin-bottom: 10px; padding: 12px; border-radius: 10px; font-size: 0.9rem; }
+        
+        .meaning.wrong { background: var(--error-bg); color: var(--error-text); }
+        .meaning.correct { background: var(--success-bg); color: var(--success-text); font-weight: 600; }
+        .meaning.instead { background: var(--info-bg); color: var(--info-text); border-left: 4px solid var(--accent); }
+
+        .meaning b { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; opacity: 0.8; }
+
+        .cta-bottom {
+            background: #f4f4f4;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        footer {
+            background: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid #eee;
+        }
+
+        .disclosure {
+            max-width: 800px;
+            margin: 20px auto 0;
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Français<span>Tips</span></a>
+        <span style="font-weight: 700; font-size: 0.8rem; color: var(--accent);">PARTE 2: LIVELLO AVANZATO</span>
+    </header>
+
+    <section class="hero">
+        <h1>Ancora 20 <span>Faux Amis</span></h1>
+        <p>Affina il tuo francese. Questi falsi amici sono più sottili e richiedono attenzione per non essere confusi con i corrispettivi italiani.</p>
+    </section>
+
+    <div class="content-container">
+        <div class="grid">
+            <div class="card">
+                <span class="french-word">Blesser</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Benedire</div>
+                <div class="meaning correct"><b>✅ Significa</b> Ferire / Offendere</div>
+                <div class="meaning instead"><b>💡 Benedire si dice:</b> Bénir</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Cave</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Cava (di pietra)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Cantina</div>
+                <div class="meaning instead"><b>💡 Cava si dice:</b> Carrière</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Librairie</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Biblioteca</div>
+                <div class="meaning correct"><b>✅ Significa</b> Libreria (negozio)</div>
+                <div class="meaning instead"><b>💡 Biblioteca si dice:</b> Bibliothèque</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Location</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Luogo / Posto</div>
+                <div class="meaning correct"><b>✅ Significa</b> Affitto / Noleggio</div>
+                <div class="meaning instead"><b>💡 Luogo si dice:</b> Lieu / Endroit</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Assister</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Aiutare (sempre)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Essere presenti / Partecipare</div>
+                <div class="meaning instead"><b>💡 Aiutare si dice:</b> Aider</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Ignorer</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Ignorare (snobbare)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Non sapere / Essere all'oscuro</div>
+                <div class="meaning instead"><b>💡 Ignorare si dice:</b> Faire fi de / Mépriser</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Demander</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Pretendere</div>
+                <div class="meaning correct"><b>✅ Significa</b> Chiedere</div>
+                <div class="meaning instead"><b>💡 Pretendere si dice:</b> Exiger / Prétendre</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Éventuellement</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Alla fine</div>
+                <div class="meaning correct"><b>✅ Significa</b> Possibilmente / Se capita</div>
+                <div class="meaning instead"><b>💡 Alla fine si dice:</b> Finalement</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Physicien</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Medico</div>
+                <div class="meaning correct"><b>✅ Significa</b> Fisico (scienziato)</div>
+                <div class="meaning instead"><b>💡 Medico si dice:</b> Médecin</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Habit</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Abitudine</div>
+                <div class="meaning correct"><b>✅ Significa</b> Vestito / Abito</div>
+                <div class="meaning instead"><b>💡 Abitudine si dice:</b> Habitude</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Formidable</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Spaventoso</div>
+                <div class="meaning correct"><b>✅ Significa</b> Meraviglioso / Fantastico</div>
+                <div class="meaning instead"><b>💡 Spaventoso si dice:</b> Effrayant</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Supporter</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Tifare / Appoggiare</div>
+                <div class="meaning correct"><b>✅ Significa</b> Sopportare / Tollerare</div>
+                <div class="meaning instead"><b>💡 Tifare si dice:</b> Soutenir / Encourager</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Entendre</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Intendere</div>
+                <div class="meaning correct"><b>✅ Significa</b> Sentire / Udire</div>
+                <div class="meaning instead"><b>💡 Intendere si dice:</b> Vouloir dire / Compter</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Note</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Nota (appunto)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Voto / Conto (ristorante)</div>
+                <div class="meaning instead"><b>💡 Appunto si dice:</b> Note / Annotation</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Chef</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Solo cuoco</div>
+                <div class="meaning correct"><b>✅ Significa</b> Capo / Responsabile</div>
+                <div class="meaning instead"><b>💡 Cuoco si dice:</b> Cuisinier</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Disputer</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Gareggiare (sempre)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Sgridare / Litigare</div>
+                <div class="meaning instead"><b>💡 Gareggiare si dice:</b> Concourir</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Commande</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Comando (ordine militare)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Ordinazione (acquisto)</div>
+                <div class="meaning instead"><b>💡 Comando si dice:</b> Commandement</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Sujet</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Suddito (sempre)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Argomento / Tema</div>
+                <div class="meaning instead"><b>💡 Suddito si dice:</b> Sujet (del re)</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Occuper</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Solo occupare spazio</div>
+                <div class="meaning correct"><b>✅ Significa</b> Prendersi cura di (s'occuper de)</div>
+                <div class="meaning instead"><b>💡 Occupare si dice:</b> Envahir / Prendre place</div>
+            </div>
+            <div class="card">
+                <span class="french-word">Vacances</span>
+                <div class="meaning wrong"><b>❌ Non significa</b> Vacanza (posto libero)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Ferie / Vacanze estive</div>
+                <div class="meaning instead"><b>💡 Posto libero si dice:</b> Vacance</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-bottom">
+        <h2>Vuoi approfondire la lingua di Molière?</h2>
+        <p>Iscriviti alla nostra newsletter per ricevere ogni settimana consigli linguistici esclusivi.</p>
+        <a href="#" class="cta-btn">Iscriviti Gratis</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FrançaisTips. La tua risorsa per il francese reale.</p>
+        <div class="disclosure">
+            <strong>Affiliate Disclosure:</strong> Questo sito è supportato dai lettori. Se acquisti tramite i nostri link, potremmo ricevere una commissione. Consigliamo solo strumenti testati e approvati per lo studio delle lingue.
+        </div>
+    </footer>
+
+</body>
+</html>
