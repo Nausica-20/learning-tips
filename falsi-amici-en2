@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsi Amici Livello Avanzato - Parte 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2e7d32; /* Verde per distinguere dalla parte 1 */
+            --primary-dark: #1b5e20;
+            --secondary: #1a237e;
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+            --bg-body: #f4f7f6;
+            --white: #ffffff;
+            --error-bg: #fff5f5;
+            --error-text: #c0392b;
+            --success-bg: #f0fff4;
+            --success-text: #27ae60;
+            --info-bg: #e1f5fe;
+            --info-text: #0288d1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Lexend', sans-serif; }
+
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span { color: var(--primary); }
+
+        .badge-advanced {
+            background: #e8f5e9;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .hero {
+            padding: 60px 20px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #fff 0%, var(--bg-body) 100%);
+        }
+
+        .hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 15px; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin: 0 auto; }
+
+        .content-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 25px;
+            transition: 0.3s;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.06); }
+
+        .word-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .english-word { font-size: 1.5rem; font-weight: 700; color: var(--secondary); }
+        
+        .meaning { margin-bottom: 10px; padding: 12px; border-radius: 10px; font-size: 0.9rem; }
+        
+        .meaning.wrong { background: var(--error-bg); color: var(--error-text); }
+        .meaning.correct { background: var(--success-bg); color: var(--success-text); font-weight: 600; }
+        .meaning.instead { background: var(--info-bg); color: var(--info-text); border-left: 4px solid var(--info-text); }
+
+        .meaning b { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; opacity: 0.8; }
+
+        .cta-bottom {
+            background: var(--secondary);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .cta-btn-lg {
+            background: var(--primary);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-block;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        footer {
+            background: #f1f2f6;
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .disclosure {
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.75rem;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">English<span>Tips</span></a>
+        <a href="#" class="cta-btn-lg" style="margin-top:0; padding: 10px 20px; font-size: 0.9rem;">Parte 1</a>
+    </header>
+
+    <section class="hero">
+        <div class="badge-advanced">Livello C1/C2</div>
+        <h1>Falsi Amici: <span>Parte 2</span></h1>
+        <p>20 parole avanzate che ingannano anche i più esperti. Affina il tuo vocabolario ed evita errori di sfumatura.</p>
+    </section>
+
+    <div class="content-container">
+        <div class="grid">
+            <div class="card">
+                <div class="word-header"><span class="english-word">Comprehensive</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Comprensivo</div>
+                <div class="meaning correct"><b>✅ Significa</b> Completo / Esauriente</div>
+                <div class="meaning instead"><b>💡 Comprensivo si dice:</b> Understanding</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Consistent</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Consistente</div>
+                <div class="meaning correct"><b>✅ Significa</b> Costante / Coerente</div>
+                <div class="meaning instead"><b>💡 Consistente si dice:</b> Substantial / Solid</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Sympathy</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Simpatia</div>
+                <div class="meaning correct"><b>✅ Significa</b> Compassione / Commozione</div>
+                <div class="meaning instead"><b>💡 Simpatia si dice:</b> Likability / Niceness</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Confident</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Confidente</div>
+                <div class="meaning correct"><b>✅ Significa</b> Sicuro di sé</div>
+                <div class="meaning instead"><b>💡 Confidente si dice:</b> Confidant</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Estate</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Estate</div>
+                <div class="meaning correct"><b>✅ Significa</b> Proprietà / Patrimonio</div>
+                <div class="meaning instead"><b>💡 Estate si dice:</b> Summer</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Lecture</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Lettura</div>
+                <div class="meaning correct"><b>✅ Significa</b> Lezione (univ.) / Conferenza</div>
+                <div class="meaning instead"><b>💡 Lettura si dice:</b> Reading</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Morbid</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Morbido</div>
+                <div class="meaning correct"><b>✅ Significa</b> Macabro / Cupo</div>
+                <div class="meaning instead"><b>💡 Morbido si dice:</b> Soft</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Patron</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Padrone</div>
+                <div class="meaning correct"><b>✅ Significa</b> Cliente / Mecenate</div>
+                <div class="meaning instead"><b>💡 Padrone si dice:</b> Owner / Master</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Physician</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Fisico</div>
+                <div class="meaning correct"><b>✅ Significa</b> Medico</div>
+                <div class="meaning instead"><b>💡 Fisico si dice:</b> Physicist</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Policy</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Polizia</div>
+                <div class="meaning correct"><b>✅ Significa</b> Politica / Strategia</div>
+                <div class="meaning instead"><b>💡 Polizia si dice:</b> Police</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Prescription</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Prescrizione (legale)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Ricetta medica</div>
+                <div class="meaning instead"><b>💡 Prescrizione si dice:</b> Limitation / Statute</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Genial</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Geniale</div>
+                <div class="meaning correct"><b>✅ Significa</b> Cordiale / Affabile</div>
+                <div class="meaning instead"><b>💡 Geniale si dice:</b> Brilliant / Genius</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Ingenuity</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Ingenuità</div>
+                <div class="meaning correct"><b>✅ Significa</b> Ingegnosità / Ingegno</div>
+                <div class="meaning instead"><b>💡 Ingenuità si dice:</b> Naivety</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Ultimate</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Ultimo (di una lista)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Definitivo / Finale</div>
+                <div class="meaning instead"><b>💡 Ultimo si dice:</b> Last</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Vicious</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Vizioso</div>
+                <div class="meaning correct"><b>✅ Significa</b> Feroce / Brutale</div>
+                <div class="meaning instead"><b>💡 Vizioso si dice:</b> Depraved / Bad-habited</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Effective</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Effettivo</div>
+                <div class="meaning correct"><b>✅ Significa</b> Efficace</div>
+                <div class="meaning instead"><b>💡 Effettivo si dice:</b> Actual / Real</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Facilities</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Facilità</div>
+                <div class="meaning correct"><b>✅ Significa</b> Servizi / Infrastrutture</div>
+                <div class="meaning instead"><b>💡 Facilità si dice:</b> Ease</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Novel</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Novella (racconto breve)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Romanzo</div>
+                <div class="meaning instead"><b>💡 Novella si dice:</b> Short story</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Notice</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Notizia</div>
+                <div class="meaning correct"><b>✅ Significa</b> Avviso / Preavviso</div>
+                <div class="meaning instead"><b>💡 Notizia si dice:</b> Piece of news</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="english-word">Stamp</span><span>🇬🇧</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Stampa</div>
+                <div class="meaning correct"><b>✅ Significa</b> Francobollo</div>
+                <div class="meaning instead"><b>💡 Stampa si dice:</b> Press / Printing</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-bottom">
+        <h2>Passa al livello successivo</h2>
+        <p>Non lasciare che queste sfumature ti blocchino. Impara l'inglese avanzato oggi.</p>
+        <a href="#" class="cta-btn-lg">Scopri i corsi avanzati</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EnglishTips. Approfondisci la tua conoscenza.</p>
+        <div class="disclosure">
+            <strong>Affiliate Disclosure:</strong> Questa pagina partecipa a programmi di affiliazione. Potremmo guadagnare una commissione sui servizi acquistati tramite i nostri link. Questo non influisce sul prezzo finale e ci permette di mantenere attive queste risorse gratuite.
+        </div>
+    </footer>
+
+</body>
+</html>
