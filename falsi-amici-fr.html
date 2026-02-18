@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Falsi Amici in Francese - Guida Pratica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0055A4; /* Bleu de France */
+            --primary-dark: #003366;
+            --accent: #EF4135; /* Rouge */
+            --secondary: #1a237e;
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+            --bg-body: #f8f9fa;
+            --white: #ffffff;
+            --error-bg: #fff5f5;
+            --error-text: #c0392b;
+            --success-bg: #f0fff4;
+            --success-text: #27ae60;
+            --info-bg: #e1f5fe;
+            --info-text: #0288d1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Lexend', sans-serif; }
+
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span { color: var(--accent); }
+
+        .hero {
+            padding: 60px 20px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #ffffff 0%, #eef2f7 100%);
+        }
+
+        .hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 15px; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin: 0 auto; }
+
+        .content-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 25px;
+            transition: 0.3s;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.06); }
+
+        .word-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .french-word { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        
+        .meaning { margin-bottom: 10px; padding: 12px; border-radius: 10px; font-size: 0.9rem; }
+        
+        .meaning.wrong { background: var(--error-bg); color: var(--error-text); }
+        .meaning.correct { background: var(--success-bg); color: var(--success-text); font-weight: 600; }
+        .meaning.instead { background: var(--info-bg); color: var(--info-text); border-left: 4px solid var(--info-text); }
+
+        .meaning b { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; opacity: 0.8; }
+
+        .cta-bottom {
+            background: var(--primary-dark);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .cta-btn-lg {
+            background: var(--accent);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-block;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        footer {
+            background: #f1f2f6;
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .disclosure {
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.75rem;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Français<span>Tips</span></a>
+        <a href="#" style="text-decoration:none; font-weight:700; color: var(--primary);">Parte 1: I Fondamentali</a>
+    </header>
+
+    <section class="hero">
+        <h1>20 <span>Falsi Amici</span> Francesi</h1>
+        <p>Il francese e l'italiano sono lingue sorelle, ma attenzione: queste 20 parole sembrano dire una cosa e invece ne dicono un'altra!</p>
+    </section>
+
+    <div class="content-container">
+        <div class="grid">
+            <div class="card">
+                <div class="word-header"><span class="french-word">Salir</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Salire</div>
+                <div class="meaning correct"><b>✅ Significa</b> Sporcare</div>
+                <div class="meaning instead"><b>💡 Salire si dice:</b> Monter</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Fermer</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Fermare</div>
+                <div class="meaning correct"><b>✅ Significa</b> Chiudere</div>
+                <div class="meaning instead"><b>💡 Fermare si dice:</b> Arrêter</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Gare</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Gara / Competizione</div>
+                <div class="meaning correct"><b>✅ Significa</b> Stazione (ferroviaria)</div>
+                <div class="meaning instead"><b>💡 Gara si dice:</b> Compétition / Course</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Cantine</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Cantina (dei vini)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Mensa (scolastica/aziendale)</div>
+                <div class="meaning instead"><b>💡 Cantina si dice:</b> Cave</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Bruit</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Brutto</div>
+                <div class="meaning correct"><b>✅ Significa</b> Rumore</div>
+                <div class="meaning instead"><b>💡 Brutto si dice:</b> Moche / Laid</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Magasin</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Magazzino</div>
+                <div class="meaning correct"><b>✅ Significa</b> Negozio</div>
+                <div class="meaning instead"><b>💡 Magazzino si dice:</b> Entrepôt</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Sale</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Sale (da cucina)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Sporco</div>
+                <div class="meaning instead"><b>💡 Sale si dice:</b> Sel</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Ville</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Villa</div>
+                <div class="meaning correct"><b>✅ Significa</b> Città</div>
+                <div class="meaning instead"><b>💡 Villa si dice:</b> Villa / Maison</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Rideau</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Ridere / Ridicolo</div>
+                <div class="meaning correct"><b>✅ Significa</b> Tenda</div>
+                <div class="meaning instead"><b>💡 Ridere si dice:</b> Rire</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Prêt</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Prete</div>
+                <div class="meaning correct"><b>✅ Significa</b> Pronto / Prestito</div>
+                <div class="meaning instead"><b>💡 Prete si dice:</b> Prêtre</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Envie</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Invidia</div>
+                <div class="meaning correct"><b>✅ Significa</b> Voglia / Desiderio</div>
+                <div class="meaning instead"><b>💡 Invidia si dice:</b> Envie (attenzione: è la stessa parola ma usata diversamente!)</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Car</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Caro / Automobile</div>
+                <div class="meaning correct"><b>✅ Significa</b> Perché / Autobus</div>
+                <div class="meaning instead"><b>💡 Automobile si dice:</b> Voiture</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Accoucher</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Accucciarsi</div>
+                <div class="meaning correct"><b>✅ Significa</b> Partorire</div>
+                <div class="meaning instead"><b>💡 Accucciarsi si dice:</b> S'accroupir</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Attendre</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Attendere (prestare attenzione)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Aspettare</div>
+                <div class="meaning instead"><b>💡 Attendere si dice:</b> Faire attention</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Journal</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Giornale (rivista)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Quotidiano / Telegiornale</div>
+                <div class="meaning instead"><b>💡 Rivista si dice:</b> Magazine / Revue</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Bureau</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Burò (solo mobile)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Ufficio / Scrivania</div>
+                <div class="meaning instead"><b>💡 Mobile si dice:</b> Meuble</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Déjeuner</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Digiunare</div>
+                <div class="meaning correct"><b>✅ Significa</b> Pranzare</div>
+                <div class="meaning instead"><b>💡 Digiunare si dice:</b> Jeûner</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Caleçon</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Calzone / Pantalone</div>
+                <div class="meaning correct"><b>✅ Significa</b> Boxer / Mutande (maschili)</div>
+                <div class="meaning instead"><b>💡 Pantaloni si dice:</b> Pantalon</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Gros</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Grosso (importante)</div>
+                <div class="meaning correct"><b>✅ Significa</b> Grasso / Grande</div>
+                <div class="meaning instead"><b>💡 Importante si dice:</b> Important / Majeur</div>
+            </div>
+            <div class="card">
+                <div class="word-header"><span class="french-word">Équipage</span><span>🇫🇷</span></div>
+                <div class="meaning wrong"><b>❌ Non significa</b> Equipaggiamento</div>
+                <div class="meaning correct"><b>✅ Significa</b> Equipaggio (persone)</div>
+                <div class="meaning instead"><b>💡 Equipaggiamento si dice:</b> Équipement</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-bottom">
+        <h2>Vuoi padroneggiare il francese?</h2>
+        <p>Evita le trappole linguistiche e impara a parlare come un vero parigino.</p>
+        <a href="#" class="cta-btn-lg">Scopri i corsi di Francese</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FrançaisTips. Apprendimento linguistico semplificato.</p>
+        <div class="disclosure">
+            <strong>Affiliate Disclosure:</strong> Questa pagina partecipa a programmi di affiliazione. Se effettui un acquisto attraverso i nostri link, potremmo ricevere una commissione senza alcun costo aggiuntivo per te. Questo ci aiuta a mantenere gratuiti i nostri contenuti.
+        </div>
+    </footer>
+
+</body>
+</html>
